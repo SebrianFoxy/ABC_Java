@@ -1,11 +1,15 @@
-function getSum(arr) {
-	let sum = arr.shift();
-	
-	if (arr.length !== 0) {
-		sum *= getSum(arr);
-	}
-	
-	return sum;
+function flattenArray(arr) {
+    let flattened = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            flattened = flattened.concat(flattenArray(arr[i]));
+        } else {
+            flattened.push(arr[i]);
+        }
+    }
+return flattened;
 }
 
-console.log(getSum([1, 2, 3, 4, 5]));
+let nestedArray = [1, [2, 7, 8], [3, 4, [5, [6, 7]]]];
+let flattenedArray = flattenArray(nestedArray);
+console.log(flattenedArray);
