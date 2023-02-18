@@ -1,9 +1,7 @@
-let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let arr = [1, 2, 3, 4, 5];
+let sum = 0;
 
-let result = arr.map(function(elem) {
-	return elem.map(function(num) {
-		return num * num;
-	});
+arr.forEach(function(elem) {
+	sum += elem*elem;
+    console.log(sum);
 });
-
-console.log(result);
