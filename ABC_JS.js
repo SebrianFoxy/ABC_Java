@@ -1,8 +1,11 @@
-let options = {
-	width:  400,
-	height: 500,
+let obj = {
+	year:  2025,
+	month: 12,
+	day:   31,
 };
 
-let {color: c = 'black', width, height} = options;
+let year, month, day;
 
-console.log(c)
+({year, month, day} = obj)
+
+console.log(year)
