@@ -1,6 +1,9 @@
-let arr = [2025, 12, 31];
-let year;
-let month;
-let day;
+let options = {
+	color: 'red',
+	width:  400,
+	height: 500,
+};
 
-[year, month, day] = arr;
+let {color, width, height} = options;
+
+console.log(width)
