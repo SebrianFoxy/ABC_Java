@@ -4,6 +4,6 @@ let options = {
 	height: 500,
 };
 
-let {color, width, height} = options;
+let {color: c, width: w, height: h} = options;
 
-console.log(width)
+console.log(c)
