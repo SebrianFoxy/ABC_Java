@@ -1,5 +1,6 @@
-let arr = ['John', 'Smit', 'development', 'programmer', 2000];
+function func() {
+	return ['John', 'Smit', 'development', 'programmer', 2000];
+}
 
-let [name, surname, department, position, salary] = arr
-
-console.log(surname)
+let [name, surname, develop, position, salary] = func();
+console.log(name, surname)
