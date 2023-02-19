@@ -1,10 +1,5 @@
-let arr = ['John', 'Smit', 'development', 'programmer'];
-
-let [name, surname, ...c] = arr;
-
-let position;
-if (arr[3] !== undefined) {
-	position = arr[3];
-} else {
-	position = 'trainee';
+function func() {
+	return (String((new Date).getFullYear()) + " " + String((new Date).getMonth()+1) + " " + String((new Date).getDate()));
 }
+
+console.log(func())
