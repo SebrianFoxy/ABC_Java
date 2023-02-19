@@ -1,9 +1,7 @@
-let arr = [-1, 1, 5, -2, 10, -5, -7, 15, -20, 2];
+func(1, 2, 3, 4, 5);
 
-let result = Math.min(...arr)
-
-
-let arr1 = [...String(12345)]
-
-console.log(result)
-console.log(arr1)
+function func(a, b, ...c){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
