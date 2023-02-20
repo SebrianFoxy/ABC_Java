@@ -1,7 +1,9 @@
-function func({color, width, height}) {
-    console.log(color)
-    console.log(width)
-    console.log(height)
-}
+let date = new Date();
 
-func( {color: 'red', width: 400, height: 500} );
+console.log(date.getFullYear()); 
+console.log(date.getMonth()+1);    
+console.log(date.getDate());     
+
+console.log(date.getHours());    
+console.log(date.getMinutes()); 
+console.log(date.getSeconds());  
