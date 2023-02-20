@@ -1,11 +1,7 @@
-let obj = {
-	year:  2025,
-	month: 12,
-	day:   31,
-};
+function func({color, width, height}) {
+    console.log(color)
+    console.log(width)
+    console.log(height)
+}
 
-let year, month, day;
-
-({year, month, day} = obj)
-
-console.log(year)
+func( {color: 'red', width: 400, height: 500} );
