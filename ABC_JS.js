@@ -1,4 +1,10 @@
-let str = '2025-12-31';
-let res = str.split('-').reverse().join('.');
+let date = new Date();
+let day = date.getDay();
 
-console.log(res);
+if (day == 6 || day == 7){
+    console.log('Выходной')
+}
+else{
+    console.log('Рабочий день')
+}
+
