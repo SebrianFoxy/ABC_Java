@@ -1,9 +1,16 @@
+function addZero(num) {
+	if (num >= 0 && num <= 9) {
+		return '0' + num;
+	} else {
+		return num;
+	}
+}
+
 let date = new Date();
 
-console.log(date.getFullYear()); 
-console.log(date.getMonth()+1);    
-console.log(date.getDate());     
-
-console.log(date.getHours());    
-console.log(date.getMinutes()); 
-console.log(date.getSeconds());  
+console.log(date.getHours() + ':' + date.getMinutes() + ':' + addZero(date.getSeconds()))
+console.log(
+	addZero(date.getFullYear()) + '-' + 
+	addZero(date.getMonth() + 1) + '-' +
+	addZero(date.getDate())
+);
