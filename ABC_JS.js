@@ -1,10 +1,10 @@
-let now  = new Date();
-let year = now.getFullYear();
+let now = new Date();
 
-for (let month = 0; month <= 11; month++) {
-	let date = new Date(year, month, 1);
-	
-	if (date.getDay() == 0) {
-		console.log(year + '-' + month + '-1');
-	}
-}
+let midnight = new Date();
+midnight.setHours(24, 0, 0, 0);
+
+let diff = midnight.getTime() - now.getTime();
+
+let hoursLeft = Math.round(diff / (1000*60*60));
+
+console.log(hoursLeft);
