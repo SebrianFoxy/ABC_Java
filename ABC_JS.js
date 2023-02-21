@@ -1,10 +1,12 @@
-let now = new Date();
+let date1 = '2020-11-31';
+let date2 = '2020-12-01';
 
-let midnight = new Date();
-midnight.setHours(24, 0, 0, 0);
-
-let diff = midnight.getTime() - now.getTime();
-
-let hoursLeft = Math.round(diff / (1000*60*60));
-
-console.log(hoursLeft);
+if (date1 > date2){
+    console.log(date1 + " " + 'больше' + " " + date2);
+}
+else if (date1 < date2){
+    console.log(date2 + " " + 'больше' + " " + date1);
+}
+else{
+    console.log("Они равны")
+}
