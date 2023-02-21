@@ -1,14 +1,14 @@
-function isLeap(){
-    if (new Date().getDate() == 29) {
+function checkDate(year, month, day){
+    if ((new Date(year, month, day).getFullYear() == year) && (new Date(year, month, day).getMonth() == month) && (new Date(year, month, day).getDate() == day)) {
 	    return true;
     } 
     else {
 	    return false;
-    }
+    }   
 }
-if (isLeap == true){
-    console.log("Високосный")
-}
-else{
-    console.log('Обычный')
-}
+
+console.log(checkDate(2025, 0, 31)); // выведет true
+console.log(checkDate(2025, 0, 32)); // выведет false
+
+
+
