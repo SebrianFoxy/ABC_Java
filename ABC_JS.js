@@ -1,5 +1,5 @@
-let now  = new Date();
-let date = new Date(2015, 11, 4, 23, 59, 59);
+let date  = new Date(2000, 8, 1);
+let now = new Date(2010, 1, 15);
 
-let diff = now.getTime() - date.getTime();
-console.log(diff / (1000 * 60 * 60));
+let diff = now - date; 
+console.log(diff/(1000*60*60*60));  
