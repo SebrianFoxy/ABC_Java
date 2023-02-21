@@ -1,13 +1,5 @@
-let date = new Date(); 
-let month = date.getMonth();
+let date = new Date(2004, 11, 6);
+let day  = date.getDay();
+let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
 
-let months = [
-'янв', 'фев', 'мар', 'апр', 'май', 'июн',
-'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
-];
-
-while (month > 11) {
-    month -= 12; 
-}
-
-console.log(months[month]);
+console.log(days[day]);
