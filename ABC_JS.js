@@ -9,10 +9,11 @@ console.log(elem.type);
 function switcher(){
 	if (elem.type == 'text'){
 		elem.type = 'button';
+		elem.value = 'Hello'
 	}
 	else{
 		elem.type = 'text'
-		elem.textContent = 'Hello'
+		elem.value = ' '
 		
 	}
 }
