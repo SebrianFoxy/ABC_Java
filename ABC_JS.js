@@ -1,15 +1,13 @@
+function func1() {
+	console.log(1);
+}
+
+function func2() {
+	console.log(2);
+}
+
 let button1 = document.querySelector('#button1');
+button1.addEventListener('click', func1)
+
 let button2 = document.querySelector('#button2');
-let button3 = document.querySelector('#button3');
-
-button1.addEventListener('click', function() {
-	console.log('Number1');
-});
-
-button2.addEventListener('click', function() {
-	console.log('Number2');
-});
-
-button3.addEventListener('click', function() {
-	console.log('Number3');
-});
+button2.addEventListener('click', func2);
