@@ -1,10 +1,3 @@
-let elems = document.querySelectorAll('li');
+let button1 = document.querySelector('#elem');
 
-for (let elem of elems) {
-	elem.addEventListener('click', func);
-}
-
-function func() {
-	console.log(this.textContent);
-	this.textContent++;
-}
+console.log(button1.getAttribute('value'))
