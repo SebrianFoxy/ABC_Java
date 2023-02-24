@@ -1,7 +1,16 @@
 let button1 = document.querySelector('#elem');
-let lenght = button1.classList.length;
+let button2 = document.querySelector('#but');
 
-console.log(lenght)
-button1.classList.add('xxx');
+button2.addEventListener('click', function func(){
+	if (button1.style.color == 'black'){
+		button1.style.color = 'red';
+		console.log('red')
+	}
+	else{
+		button1.style.color = 'black';
+		console.log('black')
+	}
+})
+
 
 
