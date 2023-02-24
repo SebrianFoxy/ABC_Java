@@ -1,7 +1,12 @@
-let divs = document.querySelectorAll('div');
+let button = document.querySelector('#button');
+let num = 0;
+button.addEventListener('click', func);
 
-for (let div of divs) {
-	div.addEventListener('click', function func(){
-		this.textContent++;
-	});
+function func() {
+	num++;
+	console.log(num);
+	if (num === 10){
+		this.removeEventListener('click', func);
+	}
+	
 }
