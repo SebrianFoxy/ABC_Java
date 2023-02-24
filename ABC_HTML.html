@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #elem {
+            display: none;
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+        }
+
+        #elem.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <p id="elem">text</p>
-    <button id="but">click</button>
+    <button id="button">click me</button>
+    <div id="elem"></div>
 
 </body>
 <script src="ABC_JS.js"></script>
