@@ -1,24 +1,7 @@
-let button = document.querySelector('#elem');
+let elem = document.querySelector('#elem');
 
-let button1 = document.querySelector('#switching');
+let button1 = document.querySelector('#but');
 
-console.log(elem.id);   
-console.log(elem.type);
-
-
-function switcher(){
-	if (elem.type == 'text'){
-		elem.type = 'button';
-		elem.value = 'Hello'
-	}
-	else{
-		elem.type = 'text'
-		elem.value = ' '
-		
-	}
-}
-
-button1.addEventListener('click', switcher)
-
-
-
+button1.addEventListener('click', function func(){
+	console.log(elem.className);
+})
