@@ -1,4 +1,4 @@
-let elems = document.querySelectorAll('p');
+let elems = document.querySelectorAll('li');
 
 for (let elem of elems) {
 	elem.addEventListener('click', func);
@@ -6,6 +6,5 @@ for (let elem of elems) {
 
 function func() {
 	console.log(this.textContent);
-	this.removeEventListener('click', func);
-	this.textContent += "!"
+	this.textContent++;
 }
