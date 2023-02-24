@@ -1,3 +1,7 @@
 let button1 = document.querySelector('#elem');
+let lenght = button1.classList.length;
 
-console.log(button1.getAttribute('value'))
+console.log(lenght)
+button1.classList.add('xxx');
+
+
