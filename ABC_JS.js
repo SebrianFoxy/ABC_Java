@@ -1,5 +1,5 @@
 let elem = document.querySelector('#elem');
 
-elem.addEventListener('click', function func(){
-	elem.textContent += ' ' + elem.dataset.text;
-})
+for (let node of elem.childNodes) {
+	console.log(node);
+}
