@@ -1,4 +1,5 @@
-let parent = document.querySelector('#parent');
+let elem = document.querySelector('#elem');
 
-let elems1 = parent.querySelectorAll('.www')
-let elems2 = parent.querySelectorAll('.ggg')
+elem.addEventListener('click', function func(){
+	elem.textContent += ' ' + elem.dataset.text;
+})
