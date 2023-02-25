@@ -1,6 +1,6 @@
-let button = document.querySelector('#button');
-let elem = document.querySelector('#elem');
+let elem = document.getElementById('elem')
 
-button.addEventListener('click', function() {
-	elem.classList.toggle('active');
-});
+console.log(elem.textContent)
+
+elem.textContent = 'delem'
+console.log(elem.textContent)
