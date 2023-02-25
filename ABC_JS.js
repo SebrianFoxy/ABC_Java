@@ -1,5 +1,12 @@
-let elem = document.querySelector('#elem');
+let elems = document.querySelectorAll('li');
+let sum = 0;
 
-for (let node of elem.childNodes) {
-	console.log(node);
+for (let elem of elems) {
+	let text = +elem.textContent;
+	
+	if (text % 6 === 0) {
+		sum += text;
+	}
 }
+
+console.log(sum);
