@@ -1,9 +1,8 @@
 let elem = document.querySelector('#elem');
-let text = document.querySelector('p')
+let button = document.querySelector('#but')
 
-elem.addEventListener('blur', function func(){
-	text.textContent += ' ' + elem.value;
-	elem.value = ' ';
+button.addEventListener('click', function func(){
+	elem.disabled = !elem.disabled
 })
 
 
