@@ -1,8 +1,9 @@
-let elems = document.querySelectorAll('p');
+let elem = document.querySelector('#elem');
+let text = document.querySelector('p')
 
-for (let elem of elems){
-	elem.addEventListener('click', function func(){
-		elem.textContent += '!';
-	})
-}
+elem.addEventListener('blur', function func(){
+	text.textContent += ' ' + elem.value;
+	elem.value = ' ';
+})
+
 
