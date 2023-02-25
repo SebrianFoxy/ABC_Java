@@ -1,6 +1,4 @@
-let elem = document.getElementById('elem')
+let parent = document.querySelector('#parent');
 
-console.log(elem.textContent)
-
-elem.textContent = 'delem'
-console.log(elem.textContent)
+let elems1 = parent.querySelectorAll('.www')
+let elems2 = parent.querySelectorAll('.ggg')
