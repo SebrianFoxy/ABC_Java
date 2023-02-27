@@ -1,10 +1,5 @@
-let radios = document.querySelectorAll('input[type="radio"]');
-let button = document.querySelector('#button');
+let elem = document.querySelector('#elem');
 
-button.addEventListener('click', function() {
-	for (let radio of radios) {
-		if (radio.checked) {
-			console.log(radio.value);
-		}
-	}
+elem.addEventListener('change', function() {
+	console.log(this.value);
 });
