@@ -1,2 +1,2 @@
 let select = document.querySelector('#select');
-select.selectedIndex = 2;
+console.log(select[0]);
