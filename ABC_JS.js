@@ -1,14 +1,12 @@
 let elem = document.querySelector('#elem');
 
-elem.addEventListener('click', func);
-elem.addEventListener('dblclick', func);
-
-
-function func(event) {
-	if (event.type == 'click'){
-		elem.style.color = 'green';
+elem.addEventListener('click', function(event) {
+	if (event.target.tagName == 'LI'){
+		event.target.textContent += '!'
 	}
-	if (event.type == 'dblclick'){
-		elem.style.color = 'red';
+	else if (event.target.tagName == 'UL'){
+		let newline = document.createElement('li')
+		newline.textContent = 'text';
+		event.target.appendChild(newline);
 	}
-}
+});
