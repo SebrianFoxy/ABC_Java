@@ -1,5 +1,14 @@
-let elem = document.getElementById('elem');
+let elem = document.querySelector('#elem');
 
-document.addEventListener('mousemove', function(event) {
-	elem.innerHTML = event.pageX + ' : ' + event.pageY;
-});
+elem.addEventListener('click', func);
+elem.addEventListener('dblclick', func);
+
+
+function func(event) {
+	if (event.type == 'click'){
+		elem.style.color = 'green';
+	}
+	if (event.type == 'dblclick'){
+		elem.style.color = 'red';
+	}
+}
