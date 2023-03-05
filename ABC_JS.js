@@ -1,8 +1,5 @@
-let elem = document.querySelector('#elem');
+let elem = document.getElementById('elem');
 
-elem.addEventListener('click', function(event) {
-	console.log(event);
-	if (event.ctrlKey == true){
-		console.log('Ctrl Clicked')
-	}
+document.addEventListener('mousemove', function(event) {
+	elem.innerHTML = event.pageX + ' : ' + event.pageY;
 });
