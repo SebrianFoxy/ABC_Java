@@ -1,7 +1,8 @@
-let textarea = document.querySelector('textarea');
-let div = document.querySelector('div');
+let elem = document.querySelector('#elem');
 
-textarea.addEventListener('blur', function() {
-	div.textContent = textarea.value;
-	textarea.value = '';
+elem.addEventListener('click', function(event) {
+	console.log(event);
+	if (event.ctrlKey == true){
+		console.log('Ctrl Clicked')
+	}
 });
