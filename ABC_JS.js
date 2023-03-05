@@ -1,12 +1,6 @@
-let elem = document.querySelector('#elem');
+let elem = document.querySelector('input');
 
-elem.addEventListener('click', function(event) {
-	if (event.target.tagName == 'LI'){
-		event.target.textContent += '!'
-	}
-	else if (event.target.tagName == 'UL'){
-		let newline = document.createElement('li')
-		newline.textContent = 'text';
-		event.target.appendChild(newline);
-	}
-});
+elem.addEventListener('keypress', function(event) {
+	console.log(event.key);
+	console.log(event.code);
+})
