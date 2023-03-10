@@ -2,10 +2,10 @@ let elem = document.querySelector('#elem');
 elem.addEventListener('blur', parent);
 
 function parent() {
-	console.log(this); // выведет ссылку на наш инпут
+	console.log(this.value); // выведет 'text'
 	
-	function child() {
-		console.log(this); // выведет undefined
+	let child = () => {
+		console.log(this.value); // выведет 'text'
 	}
 	child();
 }
