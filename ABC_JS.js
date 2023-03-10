@@ -1,11 +1,9 @@
-let button = document.querySelector('button');
-let list   = document.querySelector('ul');
-let items  = list.querySelectorAll('li');
+let elem1 = document.querySelector('#elem1');
+elem1.addEventListener('blur', func);
 
-list.addEventListener('click', function(event) {
-	let li = event.target.closest('li');
-	
-	if (li) {
-		li.innerHTML = li.innerHTML + '!';
-	}
-});
+let elem2 = document.querySelector('#elem2');
+elem2.addEventListener('blur', func);
+
+function func() {
+	console.log(this.value); // выведет или 'text1', или 'text2'
+}
