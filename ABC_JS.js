@@ -1,11 +1,7 @@
 let elem = document.querySelector('#elem');
-elem.addEventListener('blur', parent);
 
-function parent() {
-	console.log(this.value); // выведет 'text'
-	
-	let child = () => {
-		console.log(this.value); // выведет 'text'
-	}
-	child();
+function func(param1, param2) {
+	console.log(this.value + param1 + param2);
 }
+
+func.call(elem, " Hello", " MyFriend");
