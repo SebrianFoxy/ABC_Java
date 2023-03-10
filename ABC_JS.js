@@ -1,20 +1,11 @@
-elem1.addEventListener('click', function() {
-	console.log('зеленый - погружение');
-}, true);
-elem1.addEventListener('click', function() {
-	console.log('зеленый - всплытие');
-}, false);
+let button = document.querySelector('button');
+let list   = document.querySelector('ul');
+let items  = list.querySelectorAll('li');
 
-elem2.addEventListener('click', function() {
-	console.log('голубой - погружение');
-}, true);
-elem2.addEventListener('click', function() {
-	console.log('голубой - всплытие');
-}, false);
-
-elem3.addEventListener('click', function() {
-	console.log('красный - погружение');
-}, true);
-elem3.addEventListener('click', function() {
-	console.log('красный- всплытие');
-}, false);
+list.addEventListener('click', function(event) {
+	let li = event.target.closest('li');
+	
+	if (li) {
+		li.innerHTML = li.innerHTML + '!';
+	}
+});
