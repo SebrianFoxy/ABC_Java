@@ -1,7 +1,8 @@
-let elem = document.querySelector('#elem');
+let elem = document.getElementById('elem');
 
-function func(surname, name) {
-	console.log(this.value + ', ' + surname + ' ' + name);
+function func(param1, param2) {
+	console.log(this.value + param1 + param2);
 }
 
-func.apply(elem, ['John', 'Smith']);
+let newFunc = func.bind(elem);
+newFunc('1', '2');
