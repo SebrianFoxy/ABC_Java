@@ -1,13 +1,13 @@
-let elems = document.querySelectorAll('#parent p');
+let elem = document.querySelector('#elem');
 
-for (let elem of elems) {
-	let remove = document.createElement('a');
-	remove.href = '';
-	remove.textContent = 'remove';
-	elem.appendChild(remove);
+elem.addEventListener('click', function() {
+	let input = document.createElement('input');
+	input.value = elem.textContent;
 	
-	remove.addEventListener('click', function(event) {
-		elem.remove();
-		event.preventDefault();
+	input.addEventListener('blur', function() {
+		elem.textContent = this.value;
+		this.remove();
 	});
-}
+	
+	elem.parentElement.appendChild(input);
+});
