@@ -1,23 +1,12 @@
-;(function() {
-	let elem = document.querySelector('#div1'); // первый див
+;(function(selector1, selector2) {
+	let div = document.querySelector(selector1);
+	let btn = document.querySelector(selector2);
 	
 	function func(num) {
-		return num * num; // возведем в квадрат
+		return num * num;
 	}
 	
-	elem.addEventListener('click', function() {
-		this.textContent = func(elem.textContent);
+	btn.addEventListener('click', function() {
+		div.textContent = func(div.textContent);
 	});
-})();
-
-;(function() {
-	let elem = document.querySelector('#div2'); // второй див
-	
-	function func(num) {
-		return num * num * num; // возведем в куб
-	}
-	
-	elem.addEventListener('click', function() {
-		this.textContent = func(elem.textContent);
-	});
-})();
+})('#div', '#btn');
