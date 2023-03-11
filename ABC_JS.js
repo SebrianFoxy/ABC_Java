@@ -1,6 +1,6 @@
+let div = document.querySelector('#elem');
 
-let div1 = document.querySelector('#elem1');
-createTable(3, 4, div1);
+let table = createTable(3, 4);
+table.style.color = 'red';
 
-let div2 = document.querySelector('#elem2');
-createTable(5, 6, div2);
+div.appendChild(table);
