@@ -1,6 +1,23 @@
-let div = document.querySelector('#elem');
+;(function() {
+	let elem = document.querySelector('#div1'); // первый див
+	
+	function func(num) {
+		return num * num; // возведем в квадрат
+	}
+	
+	elem.addEventListener('click', function() {
+		this.textContent = func(elem.textContent);
+	});
+})();
 
-let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-let table = createTableByArr(arr);
-
-div.appendChild(table);
+;(function() {
+	let elem = document.querySelector('#div2'); // второй див
+	
+	function func(num) {
+		return num * num * num; // возведем в куб
+	}
+	
+	elem.addEventListener('click', function() {
+		this.textContent = func(elem.textContent);
+	});
+})();
