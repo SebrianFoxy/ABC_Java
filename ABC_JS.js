@@ -5,4 +5,4 @@ function setText(elems, text) {
 }
 
 let elems = document.querySelectorAll('.elem');
-setText(elems, 'text');
+setText(elems, 'text')
