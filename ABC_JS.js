@@ -1,13 +1,16 @@
 let elem = document.querySelector('#elem');
 
-elem.addEventListener('click', function() {
+elem.addEventListener('click', function func() {
 	let input = document.createElement('input');
 	input.value = elem.textContent;
 	
+	elem.textContent = '';
+	elem.appendChild(input);
+	
 	input.addEventListener('blur', function() {
 		elem.textContent = this.value;
-		this.remove();
+		elem.addEventListener('click', func); // повесим событие обратно
 	});
 	
-	elem.parentElement.appendChild(input);
+	elem.removeEventListener('click', func);
 });
