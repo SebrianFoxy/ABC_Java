@@ -1,18 +1,11 @@
-let elems = document.querySelectorAll('p');
+let elem = document.querySelector('#elem');
+let show = document.querySelector('#show');
+let hide = document.querySelector('#hide');
 
-for (let elem of elems) {
-	elem.addEventListener('click', function func() {
-		let input = document.createElement('input');
-		input.value = elem.textContent;
-		
-		elem.textContent = '';
-		elem.appendChild(input);
-		
-		input.addEventListener('blur', function() {
-			elem.textContent = this.value;
-			elem.addEventListener('click', func);
-		});
-		
-		elem.removeEventListener('click', func);
-	});
-}
+hide.addEventListener('click', function() {
+	elem.classList.add('hidden');
+});
+
+show.addEventListener('click', function() {
+	elem.classList.remove('hidden');
+});
