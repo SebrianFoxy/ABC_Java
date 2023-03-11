@@ -1,11 +1,12 @@
 let elem = document.getElementById('#elem')
 elem = parseInt(this.elem.textContent)
 
-setInterval(function func(){
+let timerID = setInterval(function func(){
 	elem = elem - 1;
 	console.log(elem)
-	if (elem == 1){
-	alert(elem);
+	if (elem == 0){
+		clearInterval(timerID)
+		alert(elem);
 }
-}, 30)
+}, 1000)
 
