@@ -1,15 +1,27 @@
 ;(function() {
-	let module = {};
+	function square(num) {
+		return num ** 2;
+	}
+	function cube(num) {
+		return num ** 3;
+	}
+	function avg(arr) {
+		return sum(arr, 1) / arr.length;
+	}
+	function digitsSum(num) {
+		return sum(String(num).split(''));
+	}
 	
-	module.func1 = function() {
-		alert('функция модуля');
-	}
-	module.func2 = function() {
-		alert('функция модуля');
-	}
-	module.func3 = function() {
-		alert('функция модуля');
+	// вспомогательная функция
+	function sum(arr) {
+		let res = 0;
+		
+		for (let elem of arr) {
+			res += +elem;
+		}
+		
+		return res;
 	}
 	
-	window.module = module;
+	window.math = {square, cube, avg, digitsSum};
 })();
