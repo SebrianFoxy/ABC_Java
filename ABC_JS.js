@@ -1,7 +1,7 @@
-let buttons = document.querySelectorAll('button');
+let tds = document.querySelectorAll('#table td');
 
-for (let button of buttons) {
-	button.addEventListener('click', function() {
-		this.previousElementSibling.classList.toggle('hidden');
+for (let td of tds) {
+	td.addEventListener('click', function() {
+		this.classList.add('active');
 	});
 }
