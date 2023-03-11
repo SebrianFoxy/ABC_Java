@@ -1,10 +1,15 @@
 let table = document.querySelector('#table');
 
-for (let i = 0; i < 3; i++) {
+let k = 1; 
+for (let i = 0; i < 5; i++) {
 	let tr = document.createElement('tr');
 	
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 5; i++) {
 		let td = document.createElement('td');
+		
+		td.textContent = k; 
+		k++; 
+		
 		tr.appendChild(td);
 	}
 	
