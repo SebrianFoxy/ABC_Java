@@ -2,6 +2,6 @@ let elem = document.querySelector('#elem');
 
 elem.addEventListener('click', function() {
 	setInterval(function(self) {
-		console.log(self.value);
+		self.value += self.value;
 	}, 1000, this);
 });
